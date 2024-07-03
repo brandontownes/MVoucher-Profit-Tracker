@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    font-family: 'Arimo', Arial, sans-serif; /* Consider a Google Font like Poppins */
+    background-color: #2f3336;
+    background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+    
+}
+
+h1, h2 {
+  color: #2b3c38;
+  font-family: 'Protest+Strike', Roboto, sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: clamp(1.5rem, 5vw, 2.5rem); /*responsive font size*/
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+h3 {
+    font-family: "Arimo", Arial, sans-serif;
+    color: #e6e0e0;      
+}
+
+footer {
+  background-color: #2f3336;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 1;
+}
+
+div {
+  background-color: #f0eeeb;
+  font-size: 27px;
+  color: #2c3335;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 500px; /* Adjust the max-width as per design requirement */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+}
+
+#percentageGain {
+  font-size: 30px;
+}
+
+#maxGainContainer {
+  font-size: 30px;
+  align-content: center;
+  flex-direction:row;
+}
+
+#priceInfoContainer {
+  font-size: 30px;
+  align-content: center;
+  flex-direction:row;
+}
+
+div:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#footer a {
+    color: #e6e0e0;
+    transition: color 0.3s ease;
+}
+
+#footer a:hover {
+    color: #ffffff;
+}
+
+#button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1px;
+  margin-bottom: 40px;
+}
+
+
+#in-page-channel-node-id {
+  margin: 0;
+  padding: 0;
+  border: none; /* Only add this if there is an unwanted border */
+}
