@@ -27,19 +27,19 @@ async function fetchWalletInfo(cardanoPrice, percentageGain, milkPrice) {
   console.log(data);
 
   // filter for a specific token and display its quantity
-  const specificTokenUnit = "a2936e00439913f1ac105c29883c013322360247c409343028b831be4d564f5543484552";
+  const specificTokenUnit = "a2936e00439913f1ac105c29883c013322360247c409343028b831be4d564f5543484552"; // MVOUCHER asset_id
   const specificToken = data.amount.find(token => token.unit === specificTokenUnit);
 
   if (specificToken) {
-    let vaultBalance = (Number(specificToken.quantity) / 1000000).toFixed(5);
+    let walletBalance = (Number(specificToken.quantity) / 1000000).toFixed(5);
     document.getElementById("walletBalance").textContent =
-      `Balance: ${vaultBalance}`;
+      `Balance: ${walletBalance}`;
 
-    let maxCashPrice = vaultBalance * cardanoPrice;
+    let maxCashPrice = walletBalance * cardanoPrice;
     document.getElementById("maxCash").textContent =
       `$${(maxCashPrice).toFixed(3)}`;
 
-    let maxGains = vaultBalance * milkPrice;
+    let maxGains = walletBalance * milkPrice;
     document.getElementById("maxGain").textContent =
       `$${(maxGains).toFixed(3)}`;
 
